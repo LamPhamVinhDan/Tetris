@@ -1,7 +1,7 @@
 import pygame
 import sys
-from game import single_player_mode
-from tetris_two_players import two_players_mode
+from game import Game
+from tetris_two_players import *
 
 # Initialize pygame
 pygame.init()
@@ -44,9 +44,9 @@ def main():
                 sys.exit()
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_1:
-                    single_player_mode()
+                    Game()
                 elif event.key == pygame.K_2:
-                    two_players_mode()
+                    main()
 
 if __name__ == "__main__":
     main()
